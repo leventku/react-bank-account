@@ -1,7 +1,11 @@
 import { combineReducers } from 'redux';
 
+import banksReducer from './banksReducer';
+import userReducer from './userReducer';
+
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  user: userReducer,
+  banks: banksReducer
 });
 
 export default rootReducer;
