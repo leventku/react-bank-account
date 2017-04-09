@@ -1,21 +1,18 @@
+import * as types from '../actions/actionTypes';
+
 const initialState = {
-  all: [
-    {id: 0, name: 'barclays'},
-    {id: 1, name: 'natwest'},
-    {id: 2, name: 'loyds'},
-    {id: 3, name: 'HSBC'},
-    {id: 4, name: 'TSB'},
-    {id: 5, name: 'Santender'}
-  ],
+  all: [],
   active: null,
   confirmed: null
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'BANK_ACTIVATED':
+    case types.BANKS_FETCHED:
+      return { ...state, all: action.payload }
+    case types.BANK_ACTIVATED:
       return { ...state, active: action.payload }
-    case 'BANK_CONFIRMED':
+    case types.BANK_CONFIRMED:
       return { ...state, confirmed: action.payload }
 
     default:

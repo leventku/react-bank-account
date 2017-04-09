@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { activateBank } from '../actions';
+import { activateBank, fetchBanks } from '../actions';
 
 class BanksList extends Component {
+  componentWillMount() {
+    this.props.fetchBanks();
+  }
   handleClick(e) {
     this.props.activateBank(parseInt(e.target.dataset.id));
   }
@@ -32,4 +35,4 @@ const mapStateToProps = (appState) => {
   }
 }
 
-export default connect(mapStateToProps, { activateBank })(BanksList);
+export default connect(mapStateToProps, { activateBank, fetchBanks })(BanksList);
