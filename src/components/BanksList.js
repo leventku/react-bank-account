@@ -11,14 +11,14 @@ class BanksList extends Component {
   renderList() {
     return this.props.banks.map(bank => {
       return (
-        <li data-id={bank.id} className="list-group-item" style={{color: bank.id == this.props.activeBank && 'red'}} key={bank.id}>{bank.name}</li>
+        <li data-id={bank.id} className="bank-item" style={{color: bank.id == this.props.activeBank && 'red'}} key={bank.id}>{bank.name}</li>
       )
     })
   }
 
   render() {
     return (
-      <ul className="list-group col-sm-4" onClick={this.handleClick.bind(this)}>
+      <ul className="banks-list" onClick={this.handleClick.bind(this)}>
         { this.renderList() }
       </ul>
     )

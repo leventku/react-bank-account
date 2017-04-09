@@ -3,8 +3,9 @@ const initialState = {
     {id: 0, name: 'barclays'},
     {id: 1, name: 'natwest'},
     {id: 2, name: 'loyds'},
-    {id: 3, name: 'TSB'},
-    {id: 4, name: 'Santender'}
+    {id: 3, name: 'HSBC'},
+    {id: 4, name: 'TSB'},
+    {id: 5, name: 'Santender'}
   ],
   active: null,
   confirmed: null

@@ -12,9 +12,9 @@ class BankSelector extends Component {
 
   render() {
     return (
-      <div>
+      <div className="banks-selector">
         <BanksList />
-        <button className="btn" disabled={this.props.activeBank == null} onClick={this.connectBank.bind(this)}>Connect</button>
+        <button className="btn btn-wide" disabled={this.props.activeBank == null} onClick={this.connectBank.bind(this)}>Continue</button>
       </div>
     )
   }

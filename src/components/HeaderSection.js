@@ -5,7 +5,7 @@ import logo from '../../Assets/Logo_Nopa.svg';
 export default () => {
   return (
     <div className="header-section">
-      <img src={logo} alt="NOPA" />
+      <img src={logo} alt="NOPA" className="logo" />
       <button className="btn btn-login">Log in</button>
     </div>
   )
