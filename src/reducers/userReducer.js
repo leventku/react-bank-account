@@ -1,6 +1,8 @@
 const initialState = {
   started: false,
-  selectedBank: null
+  selectedBank: null,
+  authenticated: false,
+  statement: null
 };
 
 export default (state = initialState, action) => {
