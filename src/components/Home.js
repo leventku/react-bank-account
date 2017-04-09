@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import { userStart } from '../actions'
 import BankSelector from './BankSelector';
 
-class Home extends Component {
+export class Home extends Component {
   render() {
     if (!this.props.hasUserStarted) {
       return (
-        <button onClick={this.props.userStart}>Get Started</button>
+        <button className="btn btn-start" onClick={this.props.userStart}>Get Started</button>
       )
     }
     

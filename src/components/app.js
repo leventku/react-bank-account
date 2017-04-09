@@ -7,7 +7,7 @@ import FooterSection from './FooterSection'
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className="home-page">
         <HeaderSection />
         <Home />
         <FooterSection />
