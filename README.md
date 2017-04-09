@@ -9,7 +9,6 @@
 navigate to `localhost:8080` in browser
 
 ## TODO: If more time is given, the following points should be done:
-* fix svg and png proplem with jest test runner
 * write tests for components BankSelector and BanksList
 * write tests for banksReducer to handle `BANK_ACTIVATED` and `BANK_CONFIRMED` and other missing actions
 * write tests for userReducer to handle `USER_STARTED` and `BANK_SELECTED` and other missing actions

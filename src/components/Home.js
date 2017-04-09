@@ -13,7 +13,7 @@ export class Home extends Component {
           <div className="start-banner">
             <h1>Your finances, in one place</h1>
             <p className="body-text">Track of all your payments by connecting as many bank accounts as you’d like to your Nopa account and get updates your balance instantly.</p>
-            <button className="btn btn-wide" onClick={this.props.userStart}>Get Started</button>
+            <button className="btn-start btn btn-wide" onClick={this.props.userStart}>Get Started</button>
           </div>
           <div className="intro-banner">
             <h2>There’s no such things as “one size fits all” finance.</h2>
