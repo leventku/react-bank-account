@@ -13,13 +13,14 @@ class BanksList extends Component {
   }
 
   renderList() {
-    return this.props.banks.map(bank => {
+    return this.props.banks.map(({id, name, logo, orient})=> {
       const itemClass = cn('bank-item',{
-        'bank-item-selected': bank.id == this.props.activeBank
-      })
+        'bank-item-selected': id == this.props.activeBank
+      });
+      const imgClass = `${orient}-img`
       return (
-        <li data-id={bank.id} className={itemClass} key={bank.id}>
-          {bank.name}
+        <li data-id={id} className={itemClass} key={id}>
+          <img src={logo} alt={name} className={imgClass} data-id={id}/>
         </li>
       )
     })
