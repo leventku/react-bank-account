@@ -4,10 +4,10 @@ export default () => {
   return (
     <div className="footer-section bg-blue-dark">
       <p className="body-text">
-        © Zopa Limited 2017 All rights reserved. 'Zopa' and the Zopa logo are trade marks of Zopa Limited. Zopa is a member of CIFAS – the UK's leading anti-fraud association, and we are registered with the Office of the Information Commissioner (No. Z879078).
+        © Nopa duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
       <p className="body-text">
-        Zopa Limited is incorporated in England & Wales (registration number 05197592), with its registered office at 1st Floor, Cottons Centre, Tooley Street, London, SE1 2QG. Zopa Limited is authorised and regulated by the Financial Conduct Authority, and entered on the Financial Services Register under firm registration number 563134.
+        Nopa Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
     </div>
   )

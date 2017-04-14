@@ -6,7 +6,7 @@ import BanksList from './BanksList';
 import { confirmBank } from '../actions';
 
 class BankSelector extends Component {
-  connectBank() {   
+  connectBank = () => {
     this.props.confirmBank()
   }
 
@@ -19,7 +19,10 @@ class BankSelector extends Component {
           <p className="body-text show-desktop">Track of all your payments by connecting as many bank accounts as you’d like to your Nopa account and get updates your balance instantly. Plus it’s free.</p>
         </div>
         <BanksList />
-        <button className="btn btn-wide" disabled={this.props.activeBank == null} onClick={this.connectBank.bind(this)}>Continue</button>
+        <button 
+          className="btn btn-wide"
+          disabled={this.props.activeBank == null}
+          onClick={this.connectBank}>Continue</button>
       </div>
     )
   }

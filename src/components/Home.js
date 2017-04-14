@@ -19,8 +19,8 @@ export class Home extends Component {
             <h2>There’s no such things as “one size fits all” finance.</h2>
             <p className="body-text black">
               We were founded to make money simple and fair, for everyone: whether you’re looking for a loan, or to get better rewards for your investments.
-              <img src={introShape} alt="introShape" className="intro-shape"/>
             </p>
+            <img src={introShape} alt="introShape" className="intro-shape"/>
           </div>
         </div>
       )

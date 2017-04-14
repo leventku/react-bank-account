@@ -46,6 +46,7 @@ body {
   color: white;
 }
 
+
 .header-section {
   overflow: hidden;
   background: white;
@@ -56,6 +57,19 @@ body {
   height: 55px;
   float: left;
   margin: 5px;  
+}
+
+.btn {
+  height: 46px;
+  font-size: 17px;  
+  background: @orange;
+  border: 0;
+  border-radius: 0;
+  color: white;
+
+  &:disabled {
+    background: #ffbdb0;
+  }
 }
 
 .btn-login {
@@ -120,12 +134,3 @@ body {
   padding: 40px 16px;
 }
 
-
-.btn {
-  height: 46px;
-  font-size: 17px;  
-  background: @orange;
-  border: 0;
-  border-radius: 0;
-  color: white;
-}

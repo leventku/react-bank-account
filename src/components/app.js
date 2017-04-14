@@ -4,8 +4,7 @@ import HeaderSection from './HeaderSection'
 import Home from './Home'
 import FooterSection from './FooterSection'
 
-export default class App extends Component {
-  render() {
+export default function() {
     return (
       <div className="home-page">
         <HeaderSection />
@@ -13,5 +12,4 @@ export default class App extends Component {
         <FooterSection />
       </div>
     );
-  }
 }

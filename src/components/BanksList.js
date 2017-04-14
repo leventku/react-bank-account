@@ -7,7 +7,7 @@ class BanksList extends Component {
   componentWillMount() {
     this.props.fetchBanks();
   }
-  handleClick(e) {
+  handleClick = (e) => {
     this.props.activateBank(parseInt(e.target.dataset.id));
   }
 
@@ -21,7 +21,7 @@ class BanksList extends Component {
 
   render() {
     return (
-      <ul className="banks-list" onClick={this.handleClick.bind(this)}>
+      <ul className="banks-list" onClick={this.handleClick}>
         { this.renderList() }
       </ul>
     )
