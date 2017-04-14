@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import cn from 'classnames';
 
 import { activateBank, fetchBanks } from '../actions';
 
@@ -13,8 +14,13 @@ class BanksList extends Component {
 
   renderList() {
     return this.props.banks.map(bank => {
+      const itemClass = cn('bank-item',{
+        'bank-item-selected': bank.id == this.props.activeBank
+      })
       return (
-        <li data-id={bank.id} className="bank-item" style={{color: bank.id == this.props.activeBank && 'red'}} key={bank.id}>{bank.name}</li>
+        <li data-id={bank.id} className={itemClass} key={bank.id}>
+          {bank.name}
+        </li>
       )
     })
   }
