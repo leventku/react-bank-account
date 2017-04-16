@@ -6,7 +6,7 @@ import ConnectedHome, { Home } from '../../src/components/Home';
 
 function setupContainer() {
   const mockStore = configureMockStore();
-  const store = mockStore({ user: {started: false}})
+  const store = mockStore({ user: {started: false}, banks: {confirmed: null}})
   const wrapper = shallow(<ConnectedHome store={store} />);
 
   return {

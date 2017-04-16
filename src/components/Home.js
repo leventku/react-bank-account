@@ -39,8 +39,10 @@ export class Home extends Component {
 }
 
 const mapStateToProps = (appState) => {
+  debugger
   return {
-    hasUserStarted: appState.user.started
+    hasUserStarted: appState.user.started,
+    selectedBankId: appState.banks.confirmed
   }
 }
 

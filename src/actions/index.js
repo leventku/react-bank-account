@@ -27,9 +27,10 @@ export const fetchBanks = () => {
   }
 }
 
-export const confirmBank = () => {
+export const confirmBank = (id) => {
   return {
-    type: types.BANK_CONFIRMED
+    type: types.BANK_CONFIRMED,
+    payload: id
   }
 }
 

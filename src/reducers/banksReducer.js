@@ -10,6 +10,7 @@ export default (state = initialState, action) => {
     case types.BANKS_FETCHED:
       return { ...state, all: action.payload }
     case types.BANK_CONFIRMED:
+      console.log(action.payload)
       return { ...state, confirmed: action.payload }
 
     default:

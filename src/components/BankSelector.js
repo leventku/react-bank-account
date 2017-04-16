@@ -11,7 +11,7 @@ class BankSelector extends Component {
     this.state = { activeBankId: null }
   }
   connectBank = () => {
-    this.props.confirmBank()
+    this.props.confirmBank(this.state.activeBankId);
   }
 
   render() {
