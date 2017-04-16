@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import { activateBank, fetchBanks } from '../actions';
 
-class BanksList extends Component {
+export class BanksList extends Component {
   constructor(props) {
     super(props);
     this.state = {activeBankId: null}
