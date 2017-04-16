@@ -5,17 +5,23 @@ import cn from 'classnames';
 import { activateBank, fetchBanks } from '../actions';
 
 class BanksList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {activeBankId: null}
+  }
   componentWillMount() {
     this.props.fetchBanks();
   }
   handleClick = (e) => {
-    this.props.activateBank(parseInt(e.target.dataset.id));
+    const activeBankId = parseInt(e.target.dataset.id);
+    this.setState({activeBankId});
+    this.props.onBankActivated(activeBankId);
   }
 
   renderList() {
     return this.props.banks.map(({id, name, logo, orient})=> {
       const itemClass = cn('bank-item',{
-        'bank-item-selected': id == this.props.activeBank
+        'bank-item-selected': id == this.state.activeBankId
       });
       const imgClass = `${orient}-img`
       return (
@@ -37,9 +43,8 @@ class BanksList extends Component {
 
 const mapStateToProps = (appState) => {
   return {
-    banks: appState.banks.all,
-    activeBank: appState.banks.active
+    banks: appState.banks.all
   }
 }
 
-export default connect(mapStateToProps, { activateBank, fetchBanks })(BanksList);
+export default connect(mapStateToProps, { fetchBanks })(BanksList);

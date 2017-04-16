@@ -6,6 +6,10 @@ import BanksList from './BanksList';
 import { confirmBank } from '../actions';
 
 class BankSelector extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { activeBankId: null }
+  }
   connectBank = () => {
     this.props.confirmBank()
   }
@@ -18,20 +22,14 @@ class BankSelector extends Component {
           <p className="body-text show-mobile">Choose your bank</p>
           <p className="body-text show-desktop">Track of all your payments by connecting as many bank accounts as you’d like to your Nopa account and get updates your balance instantly. Plus it’s free.</p>
         </div>
-        <BanksList />
+        <BanksList onBankActivated={activeBankId => {this.setState({activeBankId})}}/>
         <button 
           className="btn btn-wide"
-          disabled={this.props.activeBank == null}
+          disabled={this.state.activeBankId == null}
           onClick={this.connectBank}>Continue</button>
       </div>
     )
   }
 }
 
-const mapStateToProps = (appState) => {
-  return {
-    activeBank: appState.banks.active
-  }
-}
-
-export default connect(mapStateToProps, { confirmBank })(BankSelector);
+export default connect(null, { confirmBank })(BankSelector);
