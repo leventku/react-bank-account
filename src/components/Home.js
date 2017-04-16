@@ -7,6 +7,7 @@ import introShape from '../../Assets/Shapes.png';
 
 export class Home extends Component {
   render() {
+    // initially show welcome screen
     if (!this.props.hasUserStarted) {
       return (
         <div className="home">
@@ -26,9 +27,14 @@ export class Home extends Component {
       )
     }
     
+    // if user has started show banks selector
     return (
       <BankSelector />
     )
+
+    // if bank is confirmed, show login form
+
+    // if user is authenticated, show statement and graph
   }
 }
 

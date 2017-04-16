@@ -7,7 +7,6 @@ describe('todos reducer', () => {
       reducer(undefined, {})
     ).toEqual({
       all: [],
-      active: null,
       confirmed: null
     })
   })
@@ -16,7 +15,6 @@ describe('todos reducer', () => {
     expect(
       reducer({
         all: [],
-        active: null,
         confirmed: null
       }, {
         type: types.BANKS_FETCHED,
@@ -31,7 +29,6 @@ describe('todos reducer', () => {
           { id: 0, name: 'barclays' },
           { id: 1, name: 'natwest' },
         ],
-        active: null,
         confirmed: null 
       }
     )

@@ -1,8 +1,7 @@
-import * as types from '../actions/actionTypes';
+import * as types from 'actions/actionTypes';
 
 const initialState = {
   all: [],
-  active: null,
   confirmed: null
 }
 
