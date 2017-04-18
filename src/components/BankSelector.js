@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
 
 import BanksList from './BanksList';
 
@@ -10,7 +11,8 @@ class BankSelector extends Component {
     super(props);
     this.state = { activeBankId: null }
   }
-  connectBank = () => {
+  connectBank = (history) => {
+    history.push('/login');
     this.props.confirmBank(this.state.activeBankId);
   }
 
@@ -23,10 +25,12 @@ class BankSelector extends Component {
           <p className="body-text show-desktop">Track of all your payments by connecting as many bank accounts as you’d like to your Nopa account and get updates your balance instantly. Plus it’s free.</p>
         </div>
         <BanksList onBankActivated={activeBankId => {this.setState({activeBankId})}}/>
-        <button 
-          className="btn btn-wide"
-          disabled={this.state.activeBankId == null}
-          onClick={this.connectBank}>Continue</button>
+        <Route render={({history}) => (
+          <button 
+            className="btn btn-wide"
+            disabled={this.state.activeBankId == null}
+            onClick={this.connectBank.bind(null, history)}>Continue</button>
+        )} />
       </div>
     )
   }

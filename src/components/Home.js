@@ -1,49 +1,27 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { userStart } from '../actions'
 import BankSelector from './BankSelector';
 import introShape from '../../Assets/Shapes.png';
 
-export class Home extends Component {
+export default class Home extends Component {
   render() {
-    // initially show welcome screen
-    if (!this.props.hasUserStarted) {
-      return (
-        <div className="home">
-          <div className="start-banner">
-            <h1>Your finances, in one place</h1>
-            <p className="body-text">Track of all your payments by connecting as many bank accounts as you’d like to your Nopa account and get updates your balance instantly.</p>
-            <button className="btn-start btn btn-wide" onClick={this.props.userStart}>Get Started</button>
-          </div>
-          <div className="intro-banner">
-            <h2>There’s no such things as “one size fits all” finance.</h2>
-            <p className="body-text black">
-              We were founded to make money simple and fair, for everyone: whether you’re looking for a loan, or to get better rewards for your investments.
-            </p>
-            <img src={introShape} alt="introShape" className="intro-shape"/>
-          </div>
-        </div>
-      )
-    }
-    
-    // if user has started show banks selector
     return (
-      <BankSelector />
+      <div className="home">
+        <div className="start-banner">
+          <h1>Your finances, in one place</h1>
+          <p className="body-text">Track of all your payments by connecting as many bank accounts as you’d like to your Nopa account and get updates your balance instantly.</p>
+          <Link to="/bank-selection" className="btn-start btn btn-wide">Get Started</Link>
+        </div>
+        <div className="intro-banner">
+          <h2>There’s no such things as “one size fits all” finance.</h2>
+          <p className="body-text black">
+            We were founded to make money simple and fair, for everyone: whether you’re looking for a loan, or to get better rewards for your investments.
+          </p>
+          <img src={introShape} alt="introShape" className="intro-shape"/>
+        </div>
+      </div>
     )
-
-    // if bank is confirmed, show login form
-
-    // if user is authenticated, show statement and graph
   }
 }
-
-const mapStateToProps = (appState) => {
-  debugger
-  return {
-    hasUserStarted: appState.user.started,
-    selectedBankId: appState.banks.confirmed
-  }
-}
-
-export default connect(mapStateToProps, {userStart})(Home);
