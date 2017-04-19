@@ -20,3 +20,8 @@ export default function() {
       </Router>
     );
 }
+
+/* TODO:
+ * Write tests
+ * for path=/login: Add logic to check if bank has been selected. otherwise nav to /bank-selection
+ * */

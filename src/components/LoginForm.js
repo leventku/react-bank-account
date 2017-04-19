@@ -65,3 +65,12 @@ export default class LoginForm extends Component {
     )
   }
 };
+
+/*
+ * TODO: 
+ * connect to redux store and check if bank has selected
+ * disable login button if the fields are empty
+ * add form validation logic
+ * write tests
+ * add propType checking
+*/

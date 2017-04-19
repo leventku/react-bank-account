@@ -9,7 +9,9 @@ export default () => {
       <Link to="/">
         <img src={logo} alt="NOPA" className="logo" />
       </Link>
-      <button className="btn btn-login">Log in</button>
+      <Link to="/login" className="btn btn-login">
+        Log in
+      </Link>
     </div>
   )
 }
